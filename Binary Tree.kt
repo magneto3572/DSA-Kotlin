@@ -45,7 +45,7 @@ fun main() {
     rootNode.right?.left = BinaryNode(6)
     rootNode.right?.right = BinaryNode(7)
     
-	preOrder(rootNode)
+    preOrder(rootNode)
     inOrder(rootNode)
     postOrder(rootNode)
 }
