@@ -4,7 +4,7 @@
         var right : BinaryNode? = null
     )
 
-    private fun levelOrder(root : BinaryNode?){
+    private fun greatestInEachLevel(root : BinaryNode?){
 
         if(root == null){
             return
@@ -17,8 +17,8 @@
                 }
             }
 
-            levelOrder(root.left)
-            levelOrder(root.right)
+            greatestInEachLevel(root.left)
+            greatestInEachLevel(root.right)
         }
     }
 
@@ -32,5 +32,5 @@
         rootNode.right?.left = BinaryNode(6)
         rootNode.right?.right = BinaryNode(7)
 
-        levelOrder(rootNode)
+        greatestInEachLevel(rootNode)
     }
