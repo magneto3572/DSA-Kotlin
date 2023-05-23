@@ -1,0 +1,21 @@
+fun main() {
+        val num = intArrayOf(1, 2, 3, 4, 8, 7)
+
+        var arr = swapAlternate(num)
+        for(i in 0..arr.size-1){
+            print(" "+arr[i])
+        }
+    }
+
+    private fun swapAlternate(arr : IntArray) : IntArray{
+        var i = 0
+        while (i < arr.size){
+            if(i+1 < arr.size){
+                var temp = arr[i]
+                arr[i] = arr[i+1]
+                arr[i+1] = temp
+            }
+            i += 2
+        }
+        return arr
+    }
